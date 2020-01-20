@@ -1,3 +1,3 @@
 # beautiful-scripts
 
-This repository contains beutiful scripts which I encounter on day to day basis on internet or through friends
+This repository contains beautiful scripts which I encounter on day to day basis on internet or through friends
