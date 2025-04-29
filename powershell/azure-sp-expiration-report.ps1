@@ -32,7 +32,6 @@ foreach ($App in $Applications) {
     $Secrets  = $AppCreds.PasswordCredentials
     $Certs    = $AppCreds.KeyCredentials
 
-    ############################################
     $Logs += [PSCustomObject]@{
         'ApplicationName'        = $AppName
         'ApplicationID'          = $ApplID
@@ -47,7 +46,7 @@ foreach ($App in $Applications) {
         'Owner'                  = $Username
         'Owner_ObjectID'         = $Null
     }
-    ############################################
+
 
     foreach ($Secret in $Secrets) {
         $StartDate         = $Secret.StartDateTime
@@ -56,13 +55,13 @@ foreach ($App in $Applications) {
         $SecretDescription = $Secret.SecretText
 
         $Logs += [PSCustomObject]@{
-            'ApplicationName'        = $AppName
-            'ApplicationID'          = $ApplID
+            'ApplicationName'         = $AppName
+            'ApplicationID'           = $ApplID
             'AppCreatedTime'          = $AppCreateTime
             'Secret Name'             = $SecretName
             'Secret Description'      = $SecretDescription
             'Secret Start Date'       = $StartDate
-            'Secret End Date'          = $EndDate
+            'Secret End Date'         = $EndDate
             'Certificate Name'        = $Null
             'Certificate Start Date'  = $Null
             'Certificate End Date'    = $Null
@@ -77,8 +76,8 @@ foreach ($App in $Applications) {
         $CertName  = $Cert.DisplayName
 
         $Logs += [PSCustomObject]@{
-            'ApplicationName'        = $AppName
-            'ApplicationID'          = $ApplID
+            'ApplicationName'         = $AppName
+            'ApplicationID'           = $ApplID
             'AppCreatedTime'          = $AppCreateTime
             'Secret Name'             = $Null
             'Secret Description'      = $Null
